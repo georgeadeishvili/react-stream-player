@@ -1,0 +1,82 @@
+.wt-rsp-container {
+	margin: 0;
+	padding: 16px;
+	box-sizing: border-box;
+	border-radius: 12px;
+	display: flex;
+	align-items: stretch;
+	position: relative;
+	min-width: 330px;
+	min-height: 90px;
+}
+
+.wt-rsp-container * {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+	outline: none;
+}
+
+.wt-rsp-container .wt-rsp-play-pause {
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
+	cursor: pointer;
+	border: none; 
+}
+
+.wt-rsp-container .wt-rsp-wrapper {
+	flex: 1;
+	height: 100%;
+	margin-left: 16px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.wt-rsp-container .wt-rsp-wrapper .wt-rsp-header {
+	display: flex;
+	justify-content: space-between;
+}
+.wt-rsp-container .wt-rsp-wrapper .wt-rsp-timer {
+	display: flex;
+}
+.wt-rsp-container .wt-rsp-wrapper .wt-rsp-progress-wrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	column-gap: 30px;
+}
+
+.wt-rsp-wrapper .wt-rsp-progress-background {
+	border-radius: 16px;
+	flex: 1;
+	height: 6px;
+}
+
+.wt-rsp-wrapper .wt-rsp-progress-background .wt-rsp-progress-bar {
+	width: 50%;
+	height: 100%;
+	border-radius: 16px 0 0 16px;
+}
+
+.wt-rsp-wrapper .wt-rsp-progress-background .wt-rsp-progress-bar .wt-rsp-progress-pin {
+	width: 12px;
+	height: 12px;
+	border-radius: 6px;
+	float: right;
+	position: relative;
+	left: 6px;
+	bottom: 3px;
+}
+
+.wt-rsp-wrapper .wt-rsp-progress-option-btn {
+	cursor: pointer;
+	border: none;
+	background-color: transparent;
+}
+
+.wt-rsp-container .wt-rsp-option-wrapper {
+	position: absolute;
+	right: 0;
+}
