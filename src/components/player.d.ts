@@ -1,4 +1,6 @@
 export interface PlayerProps {
+	apiKey: string
+	postId: string
 	width?: string | number
 	height?: number
 	backgroundColor?: string
