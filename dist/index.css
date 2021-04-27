@@ -1,0 +1,229 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.wt-rsp-container {
+	margin: 0;
+	padding: 16px;
+	box-sizing: border-box;
+	border-radius: 12px;
+	display: flex;
+	align-items: stretch;
+	position: relative;
+	min-width: 330px;
+	min-height: 90px;
+}
+
+.wt-rsp-container * {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+	outline: none;
+}
+
+.wt-rsp-container .wt-rsp-play-pause {
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
+	cursor: pointer;
+	border: none; 
+ 
+}
+
+.wt-rsp-container .wt-rsp-wrapper {
+	flex: 1;
+	height: 100%;
+	margin-left: 16px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.wt-rsp-container .wt-rsp-wrapper .wt-rsp-header {
+	display: flex;
+	justify-content: space-between;
+}
+.wt-rsp-container .wt-rsp-wrapper .wt-rsp-timer {
+	display: flex;
+}
+.wt-rsp-container .wt-rsp-wrapper .wt-rsp-progress-wrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	column-gap: 30px;
+	cursor: pointer;
+}
+
+.wt-rsp-wrapper .wt-rsp-progress-background {
+	border-radius: 16px;
+	flex: 1;
+	height: 6px;
+}
+
+.wt-rsp-wrapper .wt-rsp-progress-background .wt-rsp-progress-bar {
+	width: 0%;
+	height: 100%;
+	border-radius: 16px 0 0 16px;
+	position: relative;
+	z-index: 9;
+}
+
+.wt-rsp-wrapper .wt-rsp-progress-background .wt-rsp-progress-bar .wt-rsp-progress-pin {
+	width: 12px;
+	height: 12px;
+	border-radius: 6px;
+	float: right;
+	position: relative;
+	left: 10px;
+	bottom: 3px;
+}
+
+.wt-rsp-wrapper .w-100 {
+	width: 100%;
+}
+
+.wt-rsp-wrapper .wt-rsp-progress-background .wt-rsp-progress-bar-hover {
+	pointer-events: none;
+    position: absolute;
+    height: 6px;
+    width: 0%;
+    border-radius: 4px;
+    background: rgb(156, 142, 245) !important;
+}
+
+.wt-rsp-wrapper .wt-rsp-progress-background .wt-hover-duration {
+	position: absolute;
+    bottom: -2px;
+    color: rgb(103, 106, 134);
+    font-size: 12px;
+    font-family: roob-reg;
+    min-width: 36px;
+    text-align: center;
+    line-height: 12px;
+    transform: translateX(0px);
+    box-shadow: rgba(122, 104, 238, 0.1) 0px 0px 24px !important;
+    border-radius: 3px;
+    padding: 4px;
+	background: white;
+}
+
+
+.wt-rsp-wrapper .wt-rsp-progress-option-btn {
+	cursor: pointer;
+	border: none;
+	background-color: transparent;
+}
+
+.wt-rsp-container .wt-rsp-option-wrapper {
+	position: absolute;
+	right: 0;
+	background: white;
+	text-align: center;
+	border-radius: 10px;
+	box-shadow: 0 10px 30px rgb(48 41 93 / 15%);
+	top: -10px;
+    background: white;
+    border-radius: 8px;
+    padding: 6px 10px 10px 10px;
+}
+
+
+.wt-rsp-container .wt-control-title{
+	color: #676a86;
+    display: block;
+    font-size: 13px;
+    margin-bottom: 4px;
+	text-align: left;
+}
+
+
+.wt-rsp-container .speed-control{
+	display: flex;
+    align-items: center;
+    background: #f4f4f6;
+    border-radius: 8px;
+	text-align: left;
+}
+
+.wt-rsp-container .speed-control .speed-indicator {
+    text-align: center;
+    font-size: 13px;
+    line-height: 14px;
+    padding-top: 15px;
+    background: #7a68ee;
+    height: 44px;
+    width: 44px;
+    border-radius: 8px;
+    color: white;
+    font-family: roobert-reg;
+}
+
+
+.wt-rsp-container .speed-control button {
+    font-size: 1rem;
+    outline: none;
+    width: 54px;
+	cursor: pointer;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 44px;
+    text-decoration: none;
+    background: #f4f4f6;
+    box-sizing: border-box;
+    transition: opacity 0.25s;
+	border: none;
+}
+
+
+

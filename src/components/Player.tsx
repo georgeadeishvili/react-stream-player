@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from 'react'
+import * as React from 'react'
 import './player.css'
 import { PlayerProps } from './player.d'
 import Play from './PlaySvg'
@@ -14,45 +14,45 @@ let adder = 0
 
 const Player = ({ width, height = 90, apiKey, postId, backgroundColor, color, options }: PlayerProps) => {
 
-	const [rate, setRate] = useState(1);
-	const [playBack, setPlayBack] = useState(1);
+	const [rate, setRate] = React.useState(1);
+	const [playBack, setPlayBack] = React.useState(1);
 
-	const audioRef = useRef<HTMLAudioElement>(null)
-	const playerRef = useRef<HTMLDivElement>(null)
-	const lineRef = useRef<HTMLDivElement>(null)
-	const timeRef = useRef<HTMLSpanElement>(null)
-	const circleRef = useRef<HTMLDivElement>(null)
-	const hoveredLine = useRef<HTMLDivElement>(null)
-	const progressRef = useRef<HTMLDivElement>(null)
-	const hoverTimeRef = useRef<HTMLDivElement>(null)
+	const audioRef = React.useRef<HTMLAudioElement>(null)
+	const playerRef = React.useRef<HTMLDivElement>(null)
+	const lineRef = React.useRef<HTMLDivElement>(null)
+	const timeRef = React.useRef<HTMLSpanElement>(null)
+	const circleRef = React.useRef<HTMLDivElement>(null)
+	const hoveredLine = React.useRef<HTMLDivElement>(null)
+	const progressRef = React.useRef<HTMLDivElement>(null)
+	const hoverTimeRef = React.useRef<HTMLDivElement>(null)
 
 
-	const [isPlaying, setIsPlaying] = useState<boolean>(false);
-	const [hovered, setHovered] = useState<boolean>(false);
-	const [postData, setPostData] = useState<any>([]);
-	const [audios, setAudios] = useState<any>([]);
-	const [showOptions, setShowOptions] = useState<boolean>(false);
+	const [isPlaying, setIsPlaying] = React.useState<boolean>(false);
+	const [hovered, setHovered] = React.useState<boolean>(false);
+	const [postData, setPostData] = React.useState<any>([]);
+	const [audios, setAudios] = React.useState<any>([]);
+	const [showOptions, setShowOptions] = React.useState<boolean>(false);
 
-	useEffect(() => {
+	React.useEffect(() => {
 		getAudioFromPostId(postId).then(res => {
-			setPostData(res.data);
+			setPostData(res);
 		});
 	}, [])
 
-	useEffect(() => {
+	React.useEffect(() => {
 		audioRef.current!.playbackRate = rate;
 	}, [rate]);
 
-	useEffect(() => {
+	React.useEffect(() => {
 		if (postData.audios) {
 			let audioArr: any = [];
 
 			postData.audios.map((item: any, index: number) => {
 				getAudioChunks(item.key).then(resp => {
 					if (index == 0) {
-						audioRef.current!.src = resp.data;
+						audioRef.current!.src = resp;
 					}
-					audioArr.push(resp.data);
+					audioArr.push(resp);
 				})
 			});
 
