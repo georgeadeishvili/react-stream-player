@@ -1,5 +1,6 @@
+Object.defineProperty(exports, '__esModule', { value: true });
+
 var React = require('react');
-var ReactDOM = require('react-dom');
 
 function _interopNamespace(e) {
     if (e && e.__esModule) return e;
@@ -22,7 +23,6 @@ function _interopNamespace(e) {
 }
 
 var React__namespace = /*#__PURE__*/_interopNamespace(React);
-var ReactDOM__namespace = /*#__PURE__*/_interopNamespace(ReactDOM);
 
 /*! *****************************************************************************
 Copyright (c) Microsoft Corporation.
@@ -315,10 +315,10 @@ var Player = function (_a) {
                 React__namespace.createElement("button", { onClick: function () { return setPlaybackRate('up'); } }, "+")))));
 };
 
-function App() {
-    return React__namespace.createElement(Player, { width: 500, apiKey: 'sdsdds', postId: '607be4b5fd2bf155559021f7', options: true });
-}
+var Player$1 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    'default': Player
+});
 
-ReactDOM__namespace.render(React__namespace.createElement(React__namespace.StrictMode, null,
-    React__namespace.createElement(App, null)), document.getElementById('root'));
+exports.default = Player$1;
 //# sourceMappingURL=index.js.map
